@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "permissions": [ "scripting", "activeTab" ],
+  "name": "Unclickify Extension",
+  "description": "An Extension that replaces clickbait titles with their more 'real counter parts'",
+  "version": "0.1",
+
+  //"background": {
+  //  "persistent": false,
+  //  "scripts": [ "Background.js" ]
+  //},
+  "content_scripts": [
+    {
+      "matches": [ "https://ekstrabladet.dk/" ],
+      "run_at": "document_end",
+      "js": [ "Content.js" ]
+
+    }
+  ],
+  "action": {
+    "default_title": "Test",
+    "default_popup": "hello.html"
+  }
+
+  //"browser_action": {
+  //  "default_title": "Unclickify",
+  //  "default_icon": "hello_extensions.png"
+  //},
+
+  //"permissions": [ "" ]
+}
